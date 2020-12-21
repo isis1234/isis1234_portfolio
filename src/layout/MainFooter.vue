@@ -23,12 +23,16 @@
             </a>
           </li>
           <li>
-            <a href="https://demos.creative-tim.com/vue-material-kit/documentation/">
+            <a 
+              href="https://demos.creative-tim.com/vue-material-kit/documentation/"
+              target="_blank">
               Documentation
             </a>
           </li>
           <li>
-            <a href="https://materialdesignicons.com/">
+            <a 
+              href="https://materialdesignicons.com/"
+              target="_blank">
               icons
             </a>
           </li>

@@ -23,19 +23,21 @@
                   <md-button
                     href="https://github.com/isis1234/isis1234_portfolio"
                     target="_blank"
-                    class="md-just-icon md-simple md-dribbble">
+                    class="md-just-icon md-simple"
+                    >
                     <i class="fab fa-github"></i>
                   </md-button>
                   <md-button
                     href="https://www.linkedin.com/in/wing-yu-tang-127226120"
                     target="_blank"
-                    class="md-just-icon md-simple md-twitter"
-                    ><i class="fab fa-linkedin"></i>
+                    class="md-just-icon md-simple"
+                    >
+                    <i class="fab fa-linkedin"></i>
                   </md-button>
                   <md-button
                     href="https://t.me/uuuuuzx"
                     target="_blank"
-                    class="md-just-icon md-simple md-pinterest"
+                    class="md-just-icon md-simple"
                     >
                       <i class="fab fa-telegram"></i>
                   </md-button>
@@ -73,7 +75,6 @@
 import { Skills, Experiences, Educations, Projects } from "./profolio";
 export default {
   components: {
-    // Tabs,
     Skills, Experiences, Educations, Projects
   },
   bodyClass: "profile-page",
@@ -119,5 +120,15 @@ export default {
         margin-bottom: 2.142rem;
       }
     }
+  }
+
+  .md-button i.fa-github {
+    color: #000000 !important;
+  }
+  .md-button i.fa-linkedin {
+    color: #0a66c2 !important;
+  }
+  .md-button i.fa-telegram {
+    color: #1d98dc !important;
   }
 </style>

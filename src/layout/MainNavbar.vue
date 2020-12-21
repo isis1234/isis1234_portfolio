@@ -226,3 +226,14 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+  .md-collapse-lateral .md-collapse .md-list-item-content i.fa-github {
+    color: #000000 !important;
+  }
+  .md-collapse-lateral .md-collapse .md-list-item-content i.fa-linkedin {
+    color: #0a66c2 !important;
+  }
+  .md-collapse-lateral .md-collapse .md-list-item-content i.fa-telegram {
+    color: #1d98dc !important;
+  }
+</style>

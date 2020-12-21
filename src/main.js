@@ -18,10 +18,15 @@ import router from "./router";
 
 import MaterialKit from "./plugins/material-kit";
 import '../node_modules/timeline-vuejs/dist/timeline-vuejs.css'
+import VueSocial from "@growthbunker/vuesocial";
 
 Vue.config.productionTip = false;
 
 Vue.use(MaterialKit);
+Vue.use(VueSocial, {
+  iconPath: '/images/vuesocial/networks/',
+  theme: "dark",
+});
 
 const NavbarStore = {
   showNavbar: false

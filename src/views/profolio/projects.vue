@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div id="projects">
     <hr>
-    <h2 class="title text-center" id="projects">Projects</h2>
+    <h2 class="title text-center">Projects</h2>
     <tabs
       :tab-name="['Software', 'Hardware', 'Speaker']"
       :tab-icon="['camera', 'palette', 'favorite']"
