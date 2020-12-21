@@ -31,14 +31,14 @@ export default {
           description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde.',
           color: sonivy_color,
-          showDayAndMonth: true
+          // showDayAndMonth: true
         },
         {
           from: this.getDate(2017, 9, 9),
           title: 'Graduated from <a href="https://www.gti.com.hk/" target="_blank">TY IVE</a>',
           description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde.',
-          showDayAndMonth: true,
+          // showDayAndMonth: true,
           color: gti_color
         }
       ]

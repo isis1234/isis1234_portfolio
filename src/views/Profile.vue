@@ -19,7 +19,7 @@
                 </div>
                 <div class="name">
                   <h3 class="title">Tang Wing Yu</h3>
-                  <h6>Software Developer</h6>
+                  <h6>Software Developer | Speaker</h6>
                   <md-button
                     href="https://github.com/isis1234/isis1234_portfolio"
                     target="_blank"
