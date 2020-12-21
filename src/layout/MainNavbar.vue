@@ -65,7 +65,7 @@
 
               <md-list-item
                 href="javascript:void(0)"
-                @click='scrollToElement("skills")'
+                @click="scrollToElement('skills')"
               >
                 <i class="material-icons">content_paste</i>
                 <p>Skills</p>
@@ -80,24 +80,30 @@
               </md-list-item>
               <md-list-item
                 href="javascript:void(0)"
-                @click='scrollToElement("educations")'
+                @click="scrollToElement('educations')"
               >
                 <i class="material-icons">school</i>
                 <p>Educations</p>
               </md-list-item>
               <md-list-item
                 href="javascript:void(0)"
-                @click='scrollToElement("projects")'
+                @click="scrollToElement('projects')"
               >
                 <i class="material-icons">book</i>
                 <p>Projects</p>
               </md-list-item>
               <hr />
-              <md-list-item href="https://github.com/isis1234" target="_blank">
+              <md-list-item 
+                href="https://github.com/isis1234"
+                target="_blank"
+              >
                 <i class="fab fa-github"></i>
                 <p class="hidden-lg">GitHub</p>
               </md-list-item>
-              <md-list-item href="https://www.linkedin.com/in/wing-yu-tang-127226120" target="_blank">
+              <md-list-item 
+                href="https://www.linkedin.com/in/wing-yu-tang-127226120"
+                target="_blank"
+              >
                 <i class="fab fa-linkedin"></i>
                 <p class="hidden-lg">LinkedIn</p>
               </md-list-item>
@@ -156,13 +162,12 @@ export default {
   data() {
     return {
       extraNavClasses: "",
-      toggledClass: false,
+      toggledClass: false
     };
   },
   computed: {
     showDownload() {
       const excludedRoutes = ["login", "landing", "profile"];
-      console.log(excludedRoutes.every(r => r !== this.$route.name))
       return excludedRoutes.every(r => r !== this.$route.name);
     }
   },
