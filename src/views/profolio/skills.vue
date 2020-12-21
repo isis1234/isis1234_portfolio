@@ -5,7 +5,7 @@
     <div class="section text-center">
       <div class="team">
         <div class="md-layout">
-          <div class="md-layout-item md-medium-size-50 md-small-size-100">
+          <div class="md-layout-item md-medium-size-33 md-small-size-100">
             <div class="team-player">
               <md-card class="md-card-plain">
                 <div class="md-layout-item md-size-50 mx-auto">
@@ -53,7 +53,7 @@
               </md-card>
             </div>
           </div>
-          <div class="md-layout-item md-medium-size-50 md-small-size-100">
+          <div class="md-layout-item md-medium-size-33 md-small-size-100">
             <div class="team-player">
               <md-card class="md-card-plain">
                 <div class="md-layout-item md-size-50 mx-auto">
@@ -97,7 +97,7 @@
               </md-card>
             </div>
           </div>
-          <div class="md-layout-item md-medium-size-50 md-small-size-100">
+          <div class="md-layout-item md-medium-size-33 md-small-size-100">
             <div class="team-player">
               <md-card class="md-card-plain">
                 <div class="md-layout-item md-size-50 mx-auto">
@@ -112,6 +112,50 @@
                   <br />
                   <small class="card-description text-muted"
                     >Cloud Service</small
+                  >
+                </h4>
+
+                <md-card-content>
+                  <p class="card-description">
+                    You can write here details about one of your team
+                    members. You can give more details about what they do.
+                    Feel free to add some <a href="#">links</a> for people
+                    to be able to follow them outside the site.
+                  </p>
+                </md-card-content>
+
+                <md-card-actions class="text-center">
+                  <md-button
+                    href="javascript:void(0)"
+                    class="md-just-icon md-simple"
+                  >
+                    <i class="fab fa-twitter"></i>
+                  </md-button>
+                  <md-button
+                    href="javascript:void(0)"
+                    class="md-just-icon md-simple"
+                  >
+                    <i class="fab fa-linkedin"></i>
+                  </md-button>
+                </md-card-actions>
+              </md-card>
+            </div>
+          </div>
+          <div class="md-layout-item md-medium-size-33 md-small-size-100">
+            <div class="team-player">
+              <md-card class="md-card-plain">
+                <div class="md-layout-item md-size-50 mx-auto">
+                  <img
+                    :src="python.image"
+                    alt="Thumbnail Image"
+                    class="img-raised rounded-circle img-fluid"
+                  />
+                </div>
+                <h4 class="card-title">
+                  Python
+                  <br />
+                  <small class="card-description text-muted"
+                    >Backend</small
                   >
                 </h4>
 
@@ -159,6 +203,9 @@
         },
         aws: {
           image: require("@/assets/img/skills/aws.png")
+        },
+        python: {
+          image: require("@/assets/img/skills/python.png")
         }
       }
     }

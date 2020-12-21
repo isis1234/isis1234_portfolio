@@ -226,7 +226,7 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
+<!-- <style lang="scss" scoped>
   .md-collapse-lateral .md-collapse .md-list-item-content i.fa-github {
     color: #000000 !important;
   }
@@ -237,3 +237,4 @@ export default {
     color: #1d98dc !important;
   }
 </style>
+ -->
