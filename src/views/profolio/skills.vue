@@ -5,42 +5,18 @@
     <div class="section text-center">
       <div class="team">
         <div class="md-layout">
-          <div id="vue" class="md-layout-item md-medium-size-33 md-small-size-100">
+          <div id="nodejs" class="md-layout-item md-xlarge-size-30 md-large-size-30 md-medium-size-30 md-small-size-50">
             <div class="team-player">
               <md-card class="md-card-plain">
                 <div class="md-layout-item md-size-50 mx-auto">
                   <img
-                    :src="frontend.image"
+                    :src="nodejs.image"
                     alt="Thumbnail Image"
                     class="img-raised img-fluid"
                   />
                 </div>
                 <h4 class="card-title">
-                  Vue.js
-                  <br />
-                  <small class="card-description text-muted">Frontend</small>
-                </h4>
-
-                <md-card-content>
-                  <badge type="default">Admin Panel</badge>
-                  <badge type="default">Portfolio</badge>
-                  <badge type="default">vue-cli-service</badge>
-                </md-card-content>
-              </md-card>
-            </div>
-          </div>
-          <div id="nodejs" class="md-layout-item md-medium-size-33 md-small-size-100">
-            <div class="team-player">
-              <md-card class="md-card-plain">
-                <div class="md-layout-item md-size-50 mx-auto">
-                  <img
-                    :src="backend.image"
-                    alt="Thumbnail Image"
-                    class="img-raised img-fluid"
-                  />
-                </div>
-                <h4 class="card-title">
-                  NodeJS
+                  {{nodejs.name}}
                   <br />
                   <small class="card-description text-muted"
                     >Backend</small
@@ -54,6 +30,7 @@
                   <badge type="default">Firebase</badge>
                   <badge type="default">Blockchain</badge>
                   <badge type="default">ETH Contract</badge>
+                  <badge type="default">Telegram Bot</badge>
                   <badge type="default">Axios</badge>
                   <badge type="default">Curl</badge>
                   <badge type="default">Cron Job</badge>
@@ -61,7 +38,7 @@
               </md-card>
             </div>
           </div>
-          <div id="aws" class="md-layout-item md-medium-size-33 md-small-size-100">
+          <div id="aws" class="md-layout-item md-xlarge-size-30 md-large-size-30 md-medium-size-30 md-small-size-50">
             <div class="team-player">
               <md-card class="md-card-plain">
                 <div class="md-layout-item md-size-50 mx-auto">
@@ -72,7 +49,7 @@
                   />
                 </div>
                 <h4 class="card-title">
-                  AWS
+                  {{aws.name}}
                   <br />
                   <small class="card-description text-muted"
                     >Cloud Service</small
@@ -92,36 +69,7 @@
               </md-card>
             </div>
           </div>
-        </div>
-        <div class="md-layout">
-          <div id="python" class="md-layout-item md-medium-size-33 md-small-size-100">
-            <div class="team-player">
-              <md-card class="md-card-plain">
-                <div class="md-layout-item md-size-50 mx-auto">
-                  <img
-                    :src="python.image"
-                    alt="Thumbnail Image"
-                    class="img-raised img-fluid"
-                  />
-                </div>
-                <h4 class="card-title">
-                  Python
-                  <br />
-                  <small class="card-description text-muted"
-                    >Backend</small
-                  >
-                </h4>
-
-                <md-card-content>
-                  <badge type="default">System Control Script</badge>
-                  <badge type="default">Curl</badge>
-                  <badge type="default">Face Recognition</badge>
-                  <badge type="default">Big Data</badge>
-                </md-card-content>
-              </md-card>
-            </div>
-          </div>
-          <div id="arduino" class="md-layout-item md-medium-size-33 md-small-size-100">
+          <div id="arduino" class="md-layout-item md-xlarge-size-30 md-large-size-30 md-medium-size-30 md-small-size-50">
             <div class="team-player">
               <md-card class="md-card-plain">
                 <div class="md-layout-item md-size-50 mx-auto">
@@ -132,7 +80,7 @@
                   />
                 </div>
                 <h4 class="card-title">
-                  Arduino
+                  {{arduino.name}}
                   <br />
                   <small class="card-description text-muted"
                     >IOT</small
@@ -148,7 +96,60 @@
               </md-card>
             </div>
           </div>
-          <div class="md-layout-item md-medium-size-33 md-small-size-100">
+          <div id="python" class="md-layout-item md-xlarge-size-30 md-large-size-30 md-medium-size-30 md-small-size-50">
+            <div class="team-player">
+              <md-card class="md-card-plain">
+                <div class="md-layout-item md-size-50 mx-auto">
+                  <img
+                    :src="python.image"
+                    alt="Thumbnail Image"
+                    class="img-raised img-fluid"
+                  />
+                </div>
+                <h4 class="card-title">
+                  {{python.name}}
+                  <br />
+                  <small class="card-description text-muted"
+                    >Backend</small
+                  >
+                </h4>
+
+                <md-card-content>
+                  <badge type="default">System Control Script</badge>
+                  <badge type="default">Curl</badge>
+                  <badge type="default">Face Recognition</badge>
+                  <badge type="default">Big Data</badge>
+                </md-card-content>
+              </md-card>
+            </div>
+          </div>
+          <div id="vue" class="md-layout-item md-xlarge-size-30 md-large-size-30 medium-size-30 md-small-size-50">
+            <div class="team-player">
+              <md-card class="md-card-plain">
+                <div class="md-layout-item md-size-50 mx-auto">
+                  <img
+                    :src="vue.image"
+                    alt="Thumbnail Image"
+                    class="img-raised img-fluid"
+                  />
+                </div>
+                <h4 class="card-title">
+                  {{vue.name}}
+                  <br />
+                  <small class="card-description text-muted">Frontend</small>
+                </h4>
+
+                <md-card-content>
+                  <badge type="default">Admin Panel</badge>
+                  <badge type="default">Portfolio</badge>
+                  <badge type="default">vue-cli-service</badge>
+                </md-card-content>
+              </md-card>
+            </div>
+          </div>
+        </div>
+        <div class="md-layout">
+          <div id="go" class="md-layout-item md-xlarge-size-20 md-large-size-20 md-medium-size-20 md-small-size-33">
             <div class="team-player">
               <md-card class="md-card-plain">
                 <div class="md-layout-item md-size-50 mx-auto">
@@ -158,37 +159,47 @@
                     class="img-raised img-fluid"
                   />
                 </div>
+                
                 <h4 class="card-title">
-                  Go
+                  <badge type="default">{{go.name}}</badge>
                   <br />
-                  <small class="card-description text-muted"
-                    >Backend</small
-                  >
                 </h4>
-
-                <md-card-content>
-                  <p class="card-description">
-                    You can write here details about one of your team
-                    members. You can give more details about what they do.
-                    Feel free to add some <a href="#">links</a> for people
-                    to be able to follow them outside the site.
-                  </p>
-                </md-card-content>
-
-                <md-card-actions class="text-center">
-                  <md-button
-                    href="javascript:void(0)"
-                    class="md-just-icon md-simple"
-                  >
-                    <i class="fab fa-twitter"></i>
-                  </md-button>
-                  <md-button
-                    href="javascript:void(0)"
-                    class="md-just-icon md-simple"
-                  >
-                    <i class="fab fa-linkedin"></i>
-                  </md-button>
-                </md-card-actions>
+              </md-card>
+            </div>
+          </div>
+          <div id="expo" class="md-layout-item md-xlarge-size-20 md-large-size-20 md-medium-size-20 md-small-size-33">
+            <div class="team-player">
+              <md-card class="md-card-plain">
+                <div class="md-layout-item md-size-50 mx-auto">
+                  <img
+                    :src="expo.image"
+                    alt="Thumbnail Image"
+                    class="img-raised img-fluid"
+                  />
+                </div>
+                
+                <h4 class="card-title">
+                  <badge type="default">{{expo.name}}</badge>
+                  <br />
+                </h4>
+              </md-card>
+            </div>
+          </div>
+          <div id="processing" class="md-layout-item md-xlarge-size-20 md-large-size-20 md-medium-size-20 md-small-size-33">
+            <div class="team-player">
+              <md-card class="md-card-plain">
+                <div class="md-layout-item md-size-50 mx-auto">
+                  <img
+                    :src="processing.image"
+                    alt="Thumbnail Image"
+                    class="img-raised img-fluid"
+                  />
+                </div>
+                
+                <h4 class="card-title">
+                  <badge type="default">{{processing.name}}</badge>
+                  <br />
+                </h4>
               </md-card>
             </div>
           </div>
@@ -206,23 +217,37 @@
     },
     data() {
       return {
-        frontend: {
-          image: require("@/assets/img/skills/vue.png")
+        vue: {
+          image: require("@/assets/img/skills/vue.png"),
+          name: "Vue"
         },
-        backend: {
-          image: require("@/assets/img/skills/nodejs.png")
+        nodejs: {
+          image: require("@/assets/img/skills/nodejs.png"),
+          name: "Nodejs"
         },
         aws: {
-          image: require("@/assets/img/skills/aws.png")
+          image: require("@/assets/img/skills/aws.png"),
+          name: "Amazon Web Services"
         },
         python: {
-          image: require("@/assets/img/skills/python.png")
+          image: require("@/assets/img/skills/python.png"),
+          name: "Python"
         },
         arduino: {
-          image: require("@/assets/img/skills/arduino.png")
+          image: require("@/assets/img/skills/arduino.png"),
+          name: "Arduino"
         },
         go: {
-          image: require("@/assets/img/skills/go.png")
+          image: require("@/assets/img/skills/go.png"),
+          name: "Go"
+        },
+        expo: {
+          image: require("@/assets/img/skills/expo.png"),
+          name: "Expo"
+        },
+        processing: {
+          image: require("@/assets/img/skills/processing.png"),
+          name: "Processing"
         }
       }
     }
