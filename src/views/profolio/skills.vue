@@ -1,11 +1,9 @@
 <template>
-  <div>
+  <div id="skills">
     <hr>
-    <h2 class="title text-center" id="skills">Skills</h2>
+    <h2 class="title text-center">Skills</h2>
   </div>
 </template>
 
 <script>
-export default {
-};
 </script>

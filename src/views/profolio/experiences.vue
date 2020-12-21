@@ -1,7 +1,7 @@
 <template>
   <div id="experiences">
     <hr>
-    <h2 class="title text-center" @click="this.getRandomColor">Work Experiences</h2>
+    <h2 class="title text-center">Work Experiences</h2>
     <Timeline
       :timeline-items="dataTimeline"
       :message-when-no-items="messageWhenNoItems"
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Timeline from 'timeline-vuejs'
+import Timeline from "timeline-vuejs"
 export default {
   components: {
     Timeline
@@ -19,11 +19,11 @@ export default {
   data(){
     // let sonivy_color = this.getRandomColor();
     // let gti_color = this.getRandomColor();
-    let now_color = '#e74c3c';
-    let sonivy_color = '#2ecc71';
-    let gti_color = '#2da1bf';
+    let now_color = "#e74c3c";
+    let sonivy_color = "#2ecc71";
+    let gti_color = "#2da1bf";
     return {
-      messageWhenNoItems: 'No articles found.',
+      messageWhenNoItems: "No articles found.",
       dataTimeline: [
         {
           from: this.getDate(2018, 10, 2),
@@ -45,18 +45,18 @@ export default {
     }
   },
   methods: {
-    getRandomColor(){
+    getRandomColor() {
       let letters = '0123456789ABCDEF';
       let color = '#';
       for (let i = 0; i < 6; i++) {
         color += letters[Math.floor(Math.random() * 16)];
       }
-      console.log(color);
+      // console.log(color);
       return color;
     },
-    getDate(year, month, day){
-      return new Date(year, month-1, day)
+    getDate(year, month, day) {
+      return new Date(year, month - 1, day)
     }
   }
-}
+};
 </script>
