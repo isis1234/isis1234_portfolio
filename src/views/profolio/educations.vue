@@ -26,18 +26,18 @@ export default {
       messageWhenNoItems: "No articles found.",
       dataTimeline: [
         {
-          from: this.getDate(2018, 10, 2),
-          title: 'Graduated from <a href="https://www.sonivy.com/" target="_blank">CUHK</a>',
+          from: this.getDate(2018, 5, 30),
+          title: 'Graduated from <a href="https://www.cuhk.edu.hk/" target="_blank">CUHK</a>',
           description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde.',
+            'Bachelor of Engineering<br />Major in Computer Engineering',
           color: sonivy_color,
           // showDayAndMonth: true
         },
         {
-          from: this.getDate(2017, 9, 9),
-          title: 'Graduated from <a href="https://www.gti.com.hk/" target="_blank">TY IVE</a>',
+          from: this.getDate(2014, 5, 30),
+          title: 'Graduated from <a href="https://www.ive.edu.hk/ivesite/html/en/aboutive.html" target="_blank">IVE (Tsing Yi)</a>',
           description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde.',
+            'Higher Diploma in Telecommuications and Networking',
           // showDayAndMonth: true,
           color: gti_color
         }

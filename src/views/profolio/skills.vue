@@ -91,7 +91,8 @@
             { id: "node_telegram", name: "Telegram Bot", clicked: false },
             { id: "node_axios", name: "axios", clicked: false },
             { id: "node_curl", name: "curl", clicked: false },
-            { id: "node_cron", name: "Cron Job", clicked: false }
+            { id: "node_cron", name: "Cron Job", clicked: false },
+            { id: "node_redis", name: "Redis", clicked: false }
           ]
         },
         { // aws

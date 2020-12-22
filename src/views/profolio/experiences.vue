@@ -102,7 +102,7 @@
           facebook: "https://www.facebook.com/SonivyTechnologyLimited/",
           linkedin: "https://www.linkedin.com/company/sonivy-technology-limited/",
           email: "info@sonivy.com",
-          start_date: this.getDate(2018, 5, null),
+          start_date: this.getDate(2017, 5, null),
           end_date: this.getDate(null, null, null),
           description: "You can write here details about one of your team members. You can give more details about what they do. You can write here details about one of your team members. You can give more details about what they do."
         },
@@ -114,8 +114,8 @@
           facebook: "https://www.facebook.com/GTIhongkong/",
           linkedin: "https://www.linkedin.com/company/gti-ltd",
           email: "inquiry@gti.com.hk",
-          start_date: this.getDate(2018, 5, null),
-          end_date: this.getDate(null, null, null),
+          start_date: this.getDate(2015, 7, null),
+          end_date: this.getDate(2016, 8, null),
           description: "You can write here details about one of your team members. You can give more details about what they do. You can write here details about one of your team members. You can give more details about what they do."
         }
       ]
