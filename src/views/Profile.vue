@@ -17,7 +17,7 @@
                     class="img-raised rounded-circle img-fluid"
                   />
                 </div>
-                <div class="name">
+                <div class="name" id="info">
                   <h3 class="title">Tang Wing Yu</h3>
                   <h6>Software Developer | Speaker</h6>
                   <md-button
