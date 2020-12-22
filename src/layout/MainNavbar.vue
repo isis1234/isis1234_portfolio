@@ -27,7 +27,8 @@
             </mobile-menu>
             <md-list>
               <md-list-item
-                href="/index.html"
+                href="javascript:void(0)"
+                @click="scrollToElement('info')"
               >
                 <i class="material-icons">personal</i>
                 <p>Info</p>
