@@ -6,7 +6,7 @@
   >
     <div class="container">
       <nav>
-        <ul>
+        <!-- <ul>
           <li>
             <a href="#/basic_elements">
               Basic Element
@@ -31,7 +31,7 @@
               icons
             </a>
           </li>
-        </ul>
+        </ul> -->
       </nav>
       <div class="copyright">
         &copy; {{ year }}, made with by

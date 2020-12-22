@@ -65,8 +65,8 @@
                     <i class="fab fa-linkedin"></i>
                   </md-button>
                   <md-button
-                    v-if="company.website"
-                    :href="company.website"
+                    v-if="company.email"
+                    :href="company.email"
                     target="_blank"
                     class="md-just-icon md-simple"
                   >

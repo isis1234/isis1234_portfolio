@@ -27,7 +27,7 @@
             </mobile-menu>
             <md-list>
               <md-list-item
-                href="/"
+                href="/index.html"
               >
                 <i class="material-icons">personal</i>
                 <p>Info</p>
