@@ -34,8 +34,7 @@
         </ul> -->
       </nav>
       <div class="copyright">
-        &copy; {{ year }}, made with by
-        Tang Wing Yu<md-icon>favorite</md-icon>.
+        &copy; {{ year }}, made by Tang Wing Yu<md-icon>favorite</md-icon>.
       </div>
     </div>
   </footer>

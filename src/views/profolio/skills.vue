@@ -146,7 +146,8 @@
             { id: "vue_admin", name: "Admin Panel", clicked: false },
             { id: "vue_portfolio", name: "Portfolio", clicked: false },
             { id: "vue_cli_service", name: "vue-cli-service", clicked: false },
-            { id: "vue_material", name: "Material", clicked: false }
+            { id: "vue_material", name: "Material", clicked: false },
+            { id: "vue_i18n", name: "i18n", clicked: false }
           ] 
         },
         { // dotnet

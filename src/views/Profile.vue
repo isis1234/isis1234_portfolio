@@ -12,6 +12,7 @@
               <div class="profile">
                 <div class="avatar">
                   <img
+                    id="icon"
                     :src="img"
                     alt="Circle Image"
                     class="img-raised rounded-circle img-fluid"
@@ -42,11 +43,18 @@
                       <i class="fab fa-telegram"></i>
                   </md-button>
                   <md-button 
-                    target="_blank"
-                    href="https://github.com/isis1234/isis1234_portfolio"
+                    @click="qr_modal=true"
                     class="md-success md-normal md-round">
-                    View My Resume
+                    Website QR Code
                   </md-button>
+                  <modal v-if="qr_modal" @close="qr_modal=false">
+                    <template slot="header">
+                      <h4 class="modal-title"><b></b></h4>
+                    </template>
+                    <template slot="body">
+                      <img :src="qd_link" id="qr_link"/>
+                    </template>
+                  </modal>
                 </div>
               </div>
             </div>
@@ -72,14 +80,17 @@
 </template>
 
 <script>
+import { Modal } from "@/components";
 import { Skills, Experiences, Educations, Projects } from "./profolio";
 export default {
   components: {
-    Skills, Experiences, Educations, Projects
+    Skills, Experiences, Educations, Projects, Modal
   },
   bodyClass: "profile-page",
   data() {
     return {
+      qr_modal: false,
+      qd_link: require("@/assets/img/portfolio.png")
     };
   },
   props: {
@@ -120,6 +131,10 @@ export default {
         margin-bottom: 2.142rem;
       }
     }
+  }
+
+  #qr_link {
+    transform: translate3d(0, 0, 0);
   }
 
   .md-button i.fa-github {
