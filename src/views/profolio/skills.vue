@@ -115,7 +115,7 @@
           id: "arduino",
           image: require("@/assets/img/skills/arduino.png"),
           name: "Arduino",
-          description: "IOT",
+          description: "IoT",
           tags: [
             { id: "arduino_esp8266", name: "WIFI ESP8266", clicked: false },
             { id: "arduino_bigdata", name: "Big Data", clicked: false },
