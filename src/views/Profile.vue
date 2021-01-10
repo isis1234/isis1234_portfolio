@@ -68,10 +68,11 @@
             </p>
           </div>
           <div class="profile-tabs">
-            <Skills />
-            <Experiences />
-            <Educations />
             <Projects />
+            <Skills />
+            <Educations />
+            <Experiences />
+            <br />
           </div>
         </div>
       </div>
@@ -100,7 +101,8 @@ export default {
     },
     img: {
       type: String,
-      default: require("@/assets/img/faces/christian.jpg")
+      default: require("@/assets/img/self.jpg")
+      // default: require("@/assets/img/faces/christian.jpg")
     }
   },
   computed: {

@@ -7,6 +7,7 @@
       :message-when-no-items="messageWhenNoItems"
       order="desc"
     />
+    <br />
   </div>
 </template>
 

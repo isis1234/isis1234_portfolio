@@ -16,16 +16,27 @@
               <img :src="pj1.image" class="rounded" @click="pj1.modal=true"/>
               <modal v-if="pj1.modal" @close="pj1.modal=false">
                 <template slot="header">
-                  <h4 class="modal-title"><b>PJ1</b></h4>
-                  <md-button
-                    class="md-simple md-just-icon md-round modal-default-button"
-                    @click="pj1.modal=false"
-                  >
-                    <md-icon>clear</md-icon>
-                  </md-button>
+                  <h4 class="modal-title"><b>{{pj1.title}}</b></h4>
                 </template>
                 <template slot="body">
-                  <p>pj1 Far far away.</p>
+                  <md-card>
+                    <carousel
+                      :per-page="1"
+                      loop
+                      :speed="700"
+                      autoplay
+                      :autoplay-timeout="5000"
+                      :mouse-drag="false"
+                      navigationEnabled
+                      navigationNextLabel="<i class='material-icons'>keyboard_arrow_right</i>"
+                      navigationPrevLabel="<i class='material-icons'>keyboard_arrow_left</i>"
+                    >
+                      <slide><img :src="pj1.image" /></slide>
+                      <!-- <slide><img :src="carousel2" /></slide> -->
+                      <!-- <slide><img :src="carousel3" /></slide> -->
+                    </carousel>
+                  </md-card>
+                  <p>This is my first portfolio which using vue template😃.</p>
                 </template>
               </modal>
             </div>
@@ -53,14 +64,14 @@
               <modal v-if="pj2.modal" @close="pj2.modal=false">
                 <template slot="header">
                   <h4 class="modal-title"><b>PJ2</b></h4>
+                </template>
+                <template slot="body">
                   <md-button
                     class="md-simple md-just-icon md-round modal-default-button"
                     @click="pj2.modal=false"
                   >
                     <md-icon>clear</md-icon>
                   </md-button>
-                </template>
-                <template slot="body">
                   <p>pj2 Far far away.</p>
                 </template>
               </modal>
@@ -144,6 +155,7 @@ export default {
     return {
       pj1: {
         image: require("@/assets/img/project_items/icon.png"),
+        title: "Self Porfolio",
         modal: false,
       },
       pj2: {
@@ -175,7 +187,10 @@ export default {
         { image: require("@/assets/img/examples/clem-onojeghuo.jpg") },
         { image: require("@/assets/img/examples/olu-eletu.jpg") },
         { image: require("@/assets/img/examples/studio-1.jpg") }
-      ]
+      ],
+      carousel1: require("@/assets/img/nature-2.jpg"),
+      carousel2: require("@/assets/img/nature.jpg"),
+      carousel3: require("@/assets/img/nature-3.jpg")
     };
   },
   methods: {
