@@ -68,10 +68,10 @@
             </p>
           </div>
           <div class="profile-tabs">
-            <Skills></Skills>
-            <Experiences></Experiences>
-            <Educations></Educations>
-            <Projects></Projects>
+            <Skills />
+            <Experiences />
+            <Educations />
+            <Projects />
           </div>
         </div>
       </div>

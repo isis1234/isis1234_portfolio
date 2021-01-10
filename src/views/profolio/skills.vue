@@ -55,7 +55,7 @@
                   />
                 </div>
                 <h4 class="card-title"></h4>
-                <div
+                <div 
                   @click="clicked_tag(skill)"
                   :class="selected_tag(skill)"
                 >

@@ -63,6 +63,12 @@ export default {
   components: {
     LoginCard
   },
+  props: {
+    headerColor: {
+      type: String,
+      default: ""
+    }
+  },
   bodyClass: "login-page",
   data() {
     return {

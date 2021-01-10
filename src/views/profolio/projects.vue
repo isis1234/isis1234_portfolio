@@ -15,7 +15,6 @@
             <div id="pj1">
               <img :src="pj1.image" class="rounded" @click="pj1.modal=true"/>
               <modal v-if="pj1.modal" @close="pj1.modal=false">
-                <!-- <self_portofolio /> -->
                 <template slot="header">
                   <h4 class="modal-title"><b>PJ1</b></h4>
                   <md-button
@@ -137,16 +136,14 @@
 
 <script>
 import { Tabs, Modal } from "@/components";
-// import { self_portofolio } from "./projects";
 export default {
   components: {
     Tabs, Modal,
-    // self_portofolio
   },
   data() {
     return {
       pj1: {
-        image: require("@/assets/img/examples/studio-1.jpg"),
+        image: require("@/assets/img/project_items/icon.png"),
         modal: false,
       },
       pj2: {
@@ -184,6 +181,13 @@ export default {
   methods: {
     classicModalHide() {
       this.classicModal = false;
+    }
+  },
+  computed: {
+    headerStyle() {
+      return {
+        backgroundImage: `url(${this.header})`
+      };
     }
   }
 };

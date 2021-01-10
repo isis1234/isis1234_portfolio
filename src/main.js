@@ -36,6 +36,6 @@ Vue.mixin({
 });
 
 new Vue({
-  router,
+  router, 
   render: h => h(App)
 }).$mount("#app");
