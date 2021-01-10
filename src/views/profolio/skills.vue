@@ -7,7 +7,7 @@
       <div class="team">
         <div class="md-layout" id="major_skills">
           <div 
-            class="md-layout-item md-xlarge-size-30 md-large-size-30 md-medium-size-30 md-small-size-50"
+            class="md-layout-item md-xlarge-size-33 md-large-size-33 md-medium-size-33 md-small-size-50"
             v-for="skill in major_skills" 
             :key="skill.id"
           >

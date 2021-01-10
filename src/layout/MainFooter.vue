@@ -6,32 +6,30 @@
   >
     <div class="container">
       <nav>
-        <!-- <ul>
+        <ul>
           <li>
-            <a href="#/basic_elements">
+            <a href="#/basic_elements" target="_blank">
               Basic Element
             </a>
           </li>
           <li>
-            <a href="#/landing">
+            <a href="#/landing" target="_blank">
               Landing
             </a>
           </li>
           <li>
             <a 
-              href="https://demos.creative-tim.com/vue-material-kit/documentation/"
-              target="_blank">
+              href="https://demos.creative-tim.com/vue-material-kit/documentation/" target="_blank">
               Documentation
             </a>
           </li>
           <li>
             <a 
-              href="https://materialdesignicons.com/"
-              target="_blank">
+              href="https://materialdesignicons.com/" target="_blank">
               icons
             </a>
           </li>
-        </ul> -->
+        </ul>
       </nav>
       <div class="copyright">
         &copy; {{ year }}, made by Tang Wing Yu<md-icon>favorite</md-icon>.
