@@ -138,7 +138,6 @@
                 </template>
               </modal>
             </div>
-            
             <div id="pj5">
               <img :src="pj5.image" class="rounded" @click="pj5.modal=true"/>
               <modal v-if="pj5.modal" @close="pj5.modal=false">
@@ -158,20 +157,56 @@
             </div>
           </div>
           <div class="md-layout-item md-size-33 mr-auto">
-            <div id="pj3">
-              <img :src="pj3.image" class="rounded" @click="pj3.modal=true"/>
-              <modal v-if="pj3.modal" @close="pj3.modal=false">
+            <div id="pj_MSDisplayAdapter_E6">
+              <img :src="MSDisplayAdapter_E6.image[0]" class="rounded" @click="MSDisplayAdapter_E6.modal=true"/>
+              <modal v-if="MSDisplayAdapter_E6.modal" @close="MSDisplayAdapter_E6.modal=false" style="z-index: 1; position: absolute; ">
                 <template slot="header">
-                  <h4 class="modal-title"><b>PJ3</b></h4>
-                  <md-button
-                    class="md-simple md-just-icon md-round modal-default-button"
-                    @click="pj3.modal=false"
-                  >
-                    <md-icon>clear</md-icon>
-                  </md-button>
+                  <h4 class="modal-title"><b>{{MSDisplayAdapter_E6.title}}</b></h4>
                 </template>
                 <template slot="body">
-                  <p>pj3 Far far away.</p>
+                  <md-card>
+                    <carousel
+                      :per-page="1"
+                      loop
+                      :speed="700"
+                      autoplay
+                      :autoplay-timeout="5000"
+                      :mouse-drag="false"
+                      navigationEnabled
+                      navigationNextLabel="<i class='material-icons'>keyboard_arrow_right</i>"
+                      navigationPrevLabel="<i class='material-icons'>keyboard_arrow_left</i>"
+                    >
+                      <slide><img :src="MSDisplayAdapter_E6.image[0]" /></slide>
+                      <!-- <slide><img :src="self_porfolio.image[1]" /></slide> -->
+                    </carousel>
+                   
+                    <md-card-actions class="text-center">
+                      <md-button
+                        v-if="MSDisplayAdapter_E6.github"
+                        :href="MSDisplayAdapter_E6.github"
+                        target="_blank"
+                        class="md-just-icon md-simple"
+                      >
+                        <i class="fab fa-github-square"></i>
+                      </md-button>
+                      <md-button
+                        v-if="MSDisplayAdapter_E6.demo"
+                        :href="MSDisplayAdapter_E6.demo"
+                        target="_blank"
+                        class="md-just-icon md-simple"
+                      >
+                        <i class="fas fa-external-link-square-alt"></i>
+                      </md-button>
+                    </md-card-actions>
+                  </md-card>
+                  <p>
+                    {{MSDisplayAdapter_E6.content}}
+                  </p>
+                  <div class="badge badge-success">{{MSDisplayAdapter_E6.tag[0]}}</div>
+                  <div class="badge badge-success">{{MSDisplayAdapter_E6.tag[1]}}</div>
+                  <md-card-actions class="text-center">
+                    {{MSDisplayAdapter_E6.project_date}} ({{MSDisplayAdapter_E6.weeks}} weeks)
+                  </md-card-actions>
                 </template>
               </modal>
             </div>
@@ -253,26 +288,20 @@ export default {
         id: "pj_MSDisplayAdapterE6",
         title: "MSDisplayAdapter_E6",
         modal: false,
-        content: "A reservation bot for remind you have a sit in the restaurant.",
+        content: "A script that auto start wireless projecter when i turnon my laptop.",
         image: [
-          require("@/assets/img/project_items/YuyuTelegramBot/1.png"),
-          require("@/assets/img/project_items/YuyuTelegramBot/2.png"),
-          require("@/assets/img/project_items/YuyuTelegramBot/3.png"),
+          require("@/assets/img/project_items/MSDisplayAdapter_E6/1.gif"),
         ],
-        tag: [ "NodeJS", "Telegram Bot" ],
-        project_date: this.getDate(2020, 10, null),
+        tag: [ "Python", "Bat" ],
+        project_date: this.getDate(2019, 12, null),
         weeks: 2,
-        github: "https://github.com/isis1234/yuyu_telegram_bot",
-        demo: "https://telegram.me/yuyu_test_bot"
+        github: "https://github.com/isis1234/MSDisplayAdapter_E6",
       }
     ]
     return {
       self_porfolio: software[0],
       yuyu_telegram_bot: software[1],
-      pj3: {
-        image: require("@/assets/img/examples/studio-4.jpg"),
-        modal: false,
-      },
+      MSDisplayAdapter_E6: software[2],
       pj2: {
         image: require("@/assets/img/examples/studio-5.jpg"),
         modal: false,
