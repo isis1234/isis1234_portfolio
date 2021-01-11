@@ -6,7 +6,7 @@
       <div class="team">
         <div class="md-layout">
           <div 
-            class="md-layout-item md-medium-size-33 md-small-size-100"
+            class="md-layout-item md-medium-size-50 md-small-size-100"
             v-for="company in companys" 
             :key="company.id"
           >

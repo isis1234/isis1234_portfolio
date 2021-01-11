@@ -11,12 +11,12 @@
     >
       <template slot="tab-pane-1">
         <div class="md-layout">
-          <div class="md-layout-item md-size-30 ml-auto">
-            <div id="pj1">
-              <img :src="pj1.image" class="rounded" @click="pj1.modal=true"/>
-              <modal v-if="pj1.modal" @close="pj1.modal=false">
+          <div class="md-layout-item md-size-33 ml-auto">
+            <div id="pj_self_porfolio">
+              <img :src="self_porfolio.image[0]" class="rounded" @click="self_porfolio.modal=true"/>
+              <modal v-if="self_porfolio.modal" @close="self_porfolio.modal=false" style="z-index: 1; position: absolute; ">
                 <template slot="header">
-                  <h4 class="modal-title"><b>{{pj1.title}}</b></h4>
+                  <h4 class="modal-title"><b>{{self_porfolio.title}}</b></h4>
                 </template>
                 <template slot="body">
                   <md-card>
@@ -31,34 +31,40 @@
                       navigationNextLabel="<i class='material-icons'>keyboard_arrow_right</i>"
                       navigationPrevLabel="<i class='material-icons'>keyboard_arrow_left</i>"
                     >
-                      <slide><img :src="pj1.image" /></slide>
-                      <!-- <slide><img :src="carousel2" /></slide> -->
-                      <!-- <slide><img :src="carousel3" /></slide> -->
+                      <slide><img :src="self_porfolio.image[0]" /></slide>
+                      <!-- <slide><img :src="self_porfolio.image[1]" /></slide> -->
                     </carousel>
+                   
+                    <md-card-actions class="text-center">
+                      <md-button
+                        v-if="self_porfolio.github"
+                        :href="self_porfolio.github"
+                        target="_blank"
+                        class="md-just-icon md-simple"
+                      >
+                        <i class="fab fa-github-square"></i>
+                      </md-button>
+                      <md-button
+                        v-if="self_porfolio.demo"
+                        :href="self_porfolio.demo"
+                        target="_blank"
+                        class="md-just-icon md-simple"
+                      >
+                        <i class="fas fa-external-link-square-alt"></i>
+                      </md-button>
+                    </md-card-actions>
                   </md-card>
-                  <p>This is my first portfolio which using vue template😃.</p>
+                  <p>
+                    {{self_porfolio.content}}
+                  </p>
+                  <div class="badge badge-success">{{self_porfolio.tag[0]}}</div>
+                  <div class="badge badge-success">{{self_porfolio.tag[1]}}</div>
+                  <md-card-actions class="text-center">
+                    {{self_porfolio.project_date}} ({{self_porfolio.weeks}} weeks)
+                  </md-card-actions>
                 </template>
               </modal>
             </div>
-            <div id="pj4">
-              <img :src="pj4.image" class="rounded" @click="pj4.modal=true"/>
-              <modal v-if="pj4.modal" @close="pj4.modal=false">
-                <template slot="header">
-                  <h4 class="modal-title"><b>PJ4</b></h4>
-                  <md-button
-                    class="md-simple md-just-icon md-round modal-default-button"
-                    @click="pj4.modal=false"
-                  >
-                    <md-icon>clear</md-icon>
-                  </md-button>
-                </template>
-                <template slot="body">
-                  <p>pj4 Far far away.</p>
-                </template>
-              </modal>
-            </div>
-          </div>
-          <div class="md-layout-item md-size-30 mr-auto">
             <div id="pj2">
               <img :src="pj2.image" class="rounded" @click="pj2.modal=true"/>
               <modal v-if="pj2.modal" @close="pj2.modal=false">
@@ -76,6 +82,63 @@
                 </template>
               </modal>
             </div>
+          </div>
+          <div class="md-layout-item md-size-33 mr-auto">
+            <div id="pj_yuyu_telegram_bot">
+              <img :src="yuyu_telegram_bot.image[0]" class="rounded" @click="yuyu_telegram_bot.modal=true"/>
+              <modal v-if="yuyu_telegram_bot.modal" @close="yuyu_telegram_bot.modal=false" style="z-index: 1; position: absolute; ">
+                <template slot="header">
+                  <h4 class="modal-title"><b>{{yuyu_telegram_bot.title}}</b></h4>
+                </template>
+                <template slot="body">
+                  <md-card>
+                    <carousel
+                      :per-page="1"
+                      loop
+                      :speed="700"
+                      autoplay
+                      :autoplay-timeout="5000"
+                      :mouse-drag="false"
+                      navigationEnabled
+                      navigationNextLabel="<i class='material-icons'>keyboard_arrow_right</i>"
+                      navigationPrevLabel="<i class='material-icons'>keyboard_arrow_left</i>"
+                    >
+                      <slide><img :src="yuyu_telegram_bot.image[0]" /></slide>
+                      <slide><img :src="yuyu_telegram_bot.image[1]" /></slide>
+                      <slide><img :src="yuyu_telegram_bot.image[2]" /></slide>
+                    </carousel>
+                   
+                    <md-card-actions class="text-center">
+                      <md-button
+                        v-if="yuyu_telegram_bot.github"
+                        :href="yuyu_telegram_bot.github"
+                        target="_blank"
+                        class="md-just-icon md-simple"
+                      >
+                        <i class="fab fa-github-square"></i>
+                      </md-button>
+                      <md-button
+                        v-if="yuyu_telegram_bot.demo"
+                        :href="yuyu_telegram_bot.demo"
+                        target="_blank"
+                        class="md-just-icon md-simple"
+                      >
+                        <i class="fas fa-external-link-square-alt"></i>
+                      </md-button>
+                    </md-card-actions>
+                  </md-card>
+                  <p>
+                    {{yuyu_telegram_bot.content}}
+                  </p>
+                  <div class="badge badge-success">{{yuyu_telegram_bot.tag[0]}}</div>
+                  <div class="badge badge-success">{{yuyu_telegram_bot.tag[1]}}</div>
+                  <md-card-actions class="text-center">
+                    {{yuyu_telegram_bot.project_date}} ({{yuyu_telegram_bot.weeks}} weeks)
+                  </md-card-actions>
+                </template>
+              </modal>
+            </div>
+            
             <div id="pj5">
               <img :src="pj5.image" class="rounded" @click="pj5.modal=true"/>
               <modal v-if="pj5.modal" @close="pj5.modal=false">
@@ -94,7 +157,7 @@
               </modal>
             </div>
           </div>
-          <div class="md-layout-item md-size-30 mr-auto">
+          <div class="md-layout-item md-size-33 mr-auto">
             <div id="pj3">
               <img :src="pj3.image" class="rounded" @click="pj3.modal=true"/>
               <modal v-if="pj3.modal" @close="pj3.modal=false">
@@ -115,6 +178,7 @@
           </div>
         </div>
       </template>
+
       <template slot="tab-pane-2">
         <div class="md-layout">
           <div class="md-layout-item md-size-25 ml-auto">
@@ -128,6 +192,7 @@
           </div>
         </div>
       </template>
+
       <template slot="tab-pane-3">
         <div class="md-layout">
           <div class="md-layout-item md-size-25 ml-auto">
@@ -152,21 +217,63 @@ export default {
     Tabs, Modal,
   },
   data() {
-    return {
-      pj1: {
-        image: require("@/assets/img/project_items/icon.png"),
+    let software = [
+      {
+        id: "pj_self_porfolio",
         title: "Self Porfolio",
         modal: false,
+        content: "My first portfolio which using vue template😃.",
+        image: [
+          require("@/assets/img/project_items/SelfPortfolio/1.png"),
+          require("@/assets/img/examples/olu-eletu.jpg")
+        ],
+        tag: [ "Vue", "MATERIAL" ],
+        project_date: this.getDate(2020, 12, null),
+        weeks: 2,
+        github: "https://github.com/isis1234/isis1234_portfolio",
+        demo: "https://isis1234.github.io/isis1234_portfolio/"
       },
-      pj2: {
-        image: require("@/assets/img/examples/studio-2.jpg"),
+      {
+        id: "pj_yuyu_telegram_bot",
+        title: "Yu Telegram Bot",
         modal: false,
+        content: "A reservation bot for remind you have a sit in the restaurant.",
+        image: [
+          require("@/assets/img/project_items/YuyuTelegramBot/1.png"),
+          require("@/assets/img/project_items/YuyuTelegramBot/2.png"),
+          require("@/assets/img/project_items/YuyuTelegramBot/3.png"),
+        ],
+        tag: [ "NodeJS", "Telegram Bot" ],
+        project_date: this.getDate(2020, 10, null),
+        weeks: 2,
+        github: "https://github.com/isis1234/yuyu_telegram_bot",
+        demo: "https://telegram.me/yuyu_test_bot"
       },
+      {
+        id: "pj_MSDisplayAdapterE6",
+        title: "MSDisplayAdapter_E6",
+        modal: false,
+        content: "A reservation bot for remind you have a sit in the restaurant.",
+        image: [
+          require("@/assets/img/project_items/YuyuTelegramBot/1.png"),
+          require("@/assets/img/project_items/YuyuTelegramBot/2.png"),
+          require("@/assets/img/project_items/YuyuTelegramBot/3.png"),
+        ],
+        tag: [ "NodeJS", "Telegram Bot" ],
+        project_date: this.getDate(2020, 10, null),
+        weeks: 2,
+        github: "https://github.com/isis1234/yuyu_telegram_bot",
+        demo: "https://telegram.me/yuyu_test_bot"
+      }
+    ]
+    return {
+      self_porfolio: software[0],
+      yuyu_telegram_bot: software[1],
       pj3: {
         image: require("@/assets/img/examples/studio-4.jpg"),
         modal: false,
       },
-      pj4: {
+      pj2: {
         image: require("@/assets/img/examples/studio-5.jpg"),
         modal: false,
       },
@@ -194,8 +301,18 @@ export default {
     };
   },
   methods: {
-    classicModalHide() {
-      this.classicModal = false;
+    getDate(year, month, day) {
+      let date = new Date(year, month - 1, day);
+      let dateStrParts = date.toString().split(" ");
+      
+      if(year && month && !day){
+         return `${dateStrParts[1]}, ${dateStrParts[3]}`;
+      }
+      else if(year && month && day){
+         return `${date.getDate()} ${dateStrParts[1]}, ${dateStrParts[3]}`;
+      }else if(!year && !month && !day){
+        return "Now"
+      }
     }
   },
   computed: {
