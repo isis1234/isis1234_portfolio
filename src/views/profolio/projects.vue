@@ -46,7 +46,18 @@
                     <img :src="image" />
                   </slide>
                 </carousel>
+                <div
+                  v-for="(tag, index) in pj.tag"
+                  :key="`${pj.id}_tag_${index}`"
+                  class="badge badge-success"
+                >
+                  {{ tag }}
+                </div>
                 <md-card-actions class="text-center">
+                </md-card-actions>
+                <p>{{ pj.content }}</p>
+                <md-card-actions class="text-center">
+                  {{ pj.project_date }} ({{ pj.weeks }} weeks)
                   <md-button
                     v-if="pj.github"
                     :href="pj.github"
@@ -71,18 +82,6 @@
                   >
                     <i class="fab fa-youtube-square" />
                   </md-button>
-                </md-card-actions>
-                <br />
-                <p>{{ pj.content }}</p>
-                <div
-                  v-for="(tag, index) in pj.tag"
-                  :key="`${pj.id}_tag_${index}`"
-                  class="badge badge-success"
-                >
-                  {{ tag }}
-                </div>
-                <md-card-actions class="text-center">
-                  {{ pj.project_date }} ({{ pj.weeks }} weeks)
                 </md-card-actions>
               </template>
             </modal>
