@@ -13,7 +13,7 @@
         <div class="md-layout">
           <div
             v-for="pj in software"
-            class="md-layout-item md-size-33 ml-auto"
+            class="md-layout-item md-xlarge-size-33 md-large-size-33 md-medium-size-33 md-small-size-50 ml-auto"
             :key="pj.id"
           >
             <img :src="pj.image[0]" class="rounded" @click="pj.modal = true" />
@@ -64,6 +64,14 @@
                     >
                       <i class="fas fa-external-link-square-alt" />
                     </md-button>
+                    <md-button
+                      v-if="pj.youtube"
+                      :href="pj.youtube"
+                      target="_blank"
+                      class="md-just-icon md-simple"
+                    >
+                      <i class="fab fa-youtube-square" />
+                    </md-button>
                   </md-card-actions>
                 </md-card>
                 <p>{{ pj.content }}</p>
@@ -87,7 +95,7 @@
         <div class="md-layout">
           <div
             v-for="pj in hardware"
-            class="md-layout-item md-size-33 ml-auto"
+            class="md-layout-item md-xlarge-size-33 md-large-size-33 md-medium-size-33 md-small-size-50 ml-auto"
             :key="pj.id"
           >
             <img :src="pj.image[0]" class="rounded" @click="pj.modal = true" />
@@ -161,7 +169,7 @@
         <div class="md-layout">
           <div
             v-for="pj in speaker"
-            class="md-layout-item md-size-33 ml-auto"
+            class="md-layout-item md-xlarge-size-33 md-large-size-33 md-medium-size-33 md-small-size-50 ml-auto"
             :key="pj.id"
           >
             <img :src="pj.image[0]" class="rounded" @click="pj.modal = true" />
@@ -248,10 +256,7 @@ export default {
         title: "Self Porfolio",
         modal: false,
         content: "My first portfolio which using vue template😃.",
-        image: [
-          require("@/assets/img/project_items/SelfPortfolio/1.png"),
-          require("@/assets/img/examples/olu-eletu.jpg")
-        ],
+        image: [require("@/assets/img/project_items/SelfPortfolio/1.png")],
         tag: ["Vue", "MATERIAL"],
         project_date: this.getDate(2020, 12, null),
         weeks: 2,
@@ -288,6 +293,18 @@ export default {
         project_date: this.getDate(2019, 12, null),
         weeks: 1,
         github: "https://github.com/isis1234/MSDisplayAdapter_E6"
+      },
+      {
+        id: "pj_the_forest",
+        title: "YouTube Video Log",
+        modal: false,
+        content:
+          "A youtube game log about the game and me and my friends :).",
+        image: ['https://i.ytimg.com/vi/Qucz1EUeKwM/hqdefault.jpg'],
+        tag: ["Youtube", "OBS", "VSDC", "Discord", "The Forest"],
+        project_date: this.getDate(2019, 4, null),
+        weeks: 1,
+        youtube: "https://www.youtube.com/watch?v=Qucz1EUeKwM"
       }
     ];
 
