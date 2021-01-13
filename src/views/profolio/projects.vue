@@ -28,52 +28,50 @@
                 </h4>
               </template>
               <template slot="body">
-                <md-card>
-                  <carousel
-                    :per-page="1"
-                    loop
-                    :speed="700"
-                    autoplay
-                    :autoplay-timeout="5000"
-                    :mouse-drag="false"
-                    navigationEnabled
-                    navigationNextLabel="<i class='material-icons'>keyboard_arrow_right</i>"
-                    navigationPrevLabel="<i class='material-icons'>keyboard_arrow_left</i>"
+                <carousel
+                  :per-page="1"
+                  loop
+                  :speed="700"
+                  autoplay
+                  :autoplay-timeout="5000"
+                  :mouse-drag="false"
+                  navigationEnabled
+                  navigationNextLabel="<i class='material-icons'>keyboard_arrow_right</i>"
+                  navigationPrevLabel="<i class='material-icons'>keyboard_arrow_left</i>"
+                >
+                  <slide
+                    v-for="(image, index) in pj.image"
+                    :key="`${pj.id}_image_${index}`"
                   >
-                    <slide
-                      v-for="(image, index) in pj.image"
-                      :key="`${pj.id}_image_${index}`"
-                    >
-                      <img :src="image" />
-                    </slide>
-                  </carousel>
-                  <md-card-actions class="text-center">
-                    <md-button
-                      v-if="pj.github"
-                      :href="pj.github"
-                      target="_blank"
-                      class="md-just-icon md-simple"
-                    >
-                      <i class="fab fa-github-square" />
-                    </md-button>
-                    <md-button
-                      v-if="pj.demo"
-                      :href="pj.demo"
-                      target="_blank"
-                      class="md-just-icon md-simple"
-                    >
-                      <i class="fas fa-external-link-square-alt" />
-                    </md-button>
-                    <md-button
-                      v-if="pj.youtube"
-                      :href="pj.youtube"
-                      target="_blank"
-                      class="md-just-icon md-simple"
-                    >
-                      <i class="fab fa-youtube-square" />
-                    </md-button>
-                  </md-card-actions>
-                </md-card>
+                    <img :src="image" />
+                  </slide>
+                </carousel>
+                <md-card-actions class="text-center">
+                  <md-button
+                    v-if="pj.github"
+                    :href="pj.github"
+                    target="_blank"
+                    class="md-just-icon md-simple"
+                  >
+                    <i class="fab fa-github-square" />
+                  </md-button>
+                  <md-button
+                    v-if="pj.demo"
+                    :href="pj.demo"
+                    target="_blank"
+                    class="md-just-icon md-simple"
+                  >
+                    <i class="fas fa-external-link-square-alt" />
+                  </md-button>
+                  <md-button
+                    v-if="pj.youtube"
+                    :href="pj.youtube"
+                    target="_blank"
+                    class="md-just-icon md-simple"
+                  >
+                    <i class="fab fa-youtube-square" />
+                  </md-button>
+                </md-card-actions>
                 <p>{{ pj.content }}</p>
                 <div
                   v-for="(tag, index) in pj.tag"
