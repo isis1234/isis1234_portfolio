@@ -72,6 +72,7 @@
                     <i class="fab fa-youtube-square" />
                   </md-button>
                 </md-card-actions>
+                <br />
                 <p>{{ pj.content }}</p>
                 <div
                   v-for="(tag, index) in pj.tag"
