@@ -65,8 +65,8 @@
               Hi I'm Yu🤗 A Hong Konger and loving to work on mini one man
               project. This is my porfolio for present my mini-project only, you
               can contact me if you wanna know more in my project. I'm looking
-              for any mini-workshop to share my skill and talk to any personal,
-              feel free to contact me😊.
+              for any workshop to share my skill and talk to any personal, feel 
+              free to contact me😊.
             </p>
           </div>
           <div class="profile-tabs">

@@ -16,7 +16,18 @@
             class="md-layout-item md-xlarge-size-33 md-large-size-33 md-medium-size-33 md-small-size-50 ml-auto"
             :key="pj.id"
           >
-            <img :src="pj.image[0]" class="rounded" @click="pj.modal = true" />
+            <img
+              v-if="!pj.preview_image"
+              :src="pj.image[0]"
+              class="rounded"
+              @click="pj.modal = true"
+            />
+            <img
+              v-if="pj.preview_image"
+              :src="pj.preview_image"
+              class="rounded"
+              @click="pj.modal = true"
+            />
             <modal
               v-if="pj.modal"
               @close="pj.modal = false"
@@ -53,8 +64,8 @@
                 >
                   {{ tag }}
                 </div>
-                <md-card-actions class="text-center">
-                </md-card-actions>
+                <br />
+                <br />
                 <p>{{ pj.content }}</p>
                 <md-card-actions class="text-center">
                   {{ pj.project_date }} ({{ pj.weeks }} weeks)
@@ -279,6 +290,23 @@ export default {
         demo: "https://telegram.me/yuyu_test_bot"
       },
       {
+        id: "pj_projector_3d_art",
+        title: "SONY Mobile Projector MP-CD1 Protector Part.1",
+        modal: false,
+        content:
+          "A set 3d module. Part 1 for protect the projector, Part 2 for turn projector to 5, 10, 15 degree (working).",
+        image: [
+          require("@/assets/img/project_items/Project3Dmodule/1.png"),
+          require("@/assets/img/project_items/Project3Dmodule/2.png")
+        ],
+        preview_image: require("@/assets/img/project_items/Project3Dmodule/preview.gif"),
+        tag: ["3D Art", "tinkercad"],
+        project_date: this.getDate(2020, 2, null),
+        weeks: 2,
+        demo:
+          "https://www.tinkercad.com/dashboard?type=tinkercad&collection=projects&id=7M41HrLPyzt"
+      },
+      {
         id: "pj_MSDisplayAdapterE6",
         title: "MSDisplayAdapter_E6",
         modal: false,
@@ -296,8 +324,7 @@ export default {
         id: "pj_the_forest",
         title: "YouTube Video Log",
         modal: false,
-        content:
-          "A youtube game log about the game and me and my friends :).",
+        content: "A youtube game log about the game and me and my friends :).",
         image: ['https://i.ytimg.com/vi/Qucz1EUeKwM/hqdefault.jpg'],
         tag: ["Youtube", "OBS", "VSDC", "Discord", "The Forest"],
         project_date: this.getDate(2019, 4, null),
@@ -314,7 +341,7 @@ export default {
   },
   methods: {
     getDate(year, month, day) {
-      let date = new Date(year, month - 1, day);
+      let date = new Date(year, month, day);
       let dateStrParts = date.toString().split(" ");
 
       if (year && month && !day) {
