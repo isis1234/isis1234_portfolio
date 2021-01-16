@@ -3,7 +3,7 @@
     <hr />
     <h2 class="title text-center">Projects</h2>
     <tabs
-      :tab-name="['Software', 'Hardware', 'Speaker']"
+      :tab-name="['Software', 'Hardware', 'Present']"
       :tab-icon="['camera', 'palette', 'favorite']"
       plain
       nav-pills-icons
@@ -11,6 +11,12 @@
     >
       <template slot="tab-pane-1">
         <div class="md-layout">
+          <div 
+            v-if="!software.length"
+            class="md-layout-item text-center"
+          >
+            <h4>Comming Soon :)</h4>
+          </div>
           <div
             v-for="pj in software"
             class="md-layout-item md-xlarge-size-33 md-large-size-33 md-medium-size-33 md-small-size-50 ml-auto"
@@ -102,6 +108,12 @@
 
       <template slot="tab-pane-2">
         <div class="md-layout">
+          <div 
+            v-if="!hardware.length"
+            class="md-layout-item text-center"
+          >
+            <h4>Comming Soon :)</h4>
+          </div>
           <div
             v-for="pj in hardware"
             class="md-layout-item md-xlarge-size-33 md-large-size-33 md-medium-size-33 md-small-size-50 ml-auto"
@@ -176,6 +188,12 @@
 
       <template slot="tab-pane-3">
         <div class="md-layout">
+          <div 
+            v-if="!speaker.length"
+            class="md-layout-item text-center"
+          >
+            <h4>Comming Soon :)</h4>
+          </div>
           <div
             v-for="pj in speaker"
             class="md-layout-item md-xlarge-size-33 md-large-size-33 md-medium-size-33 md-small-size-50 ml-auto"
