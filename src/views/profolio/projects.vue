@@ -11,10 +11,7 @@
     >
       <template slot="tab-pane-1">
         <div class="md-layout">
-          <div 
-            v-if="!software.length"
-            class="md-layout-item text-center"
-          >
+          <div v-if="!software.length" class="md-layout-item text-center">
             <h4>Comming Soon :)</h4>
           </div>
           <div
@@ -108,10 +105,7 @@
 
       <template slot="tab-pane-2">
         <div class="md-layout">
-          <div 
-            v-if="!hardware.length"
-            class="md-layout-item text-center"
-          >
+          <div v-if="!hardware.length" class="md-layout-item text-center">
             <h4>Comming Soon :)</h4>
           </div>
           <div
@@ -188,10 +182,7 @@
 
       <template slot="tab-pane-3">
         <div class="md-layout">
-          <div 
-            v-if="!speaker.length"
-            class="md-layout-item text-center"
-          >
+          <div v-if="!speaker.length" class="md-layout-item text-center">
             <h4>Comming Soon :)</h4>
           </div>
           <div
@@ -343,7 +334,7 @@ export default {
         title: "YouTube Video Log",
         modal: false,
         content: "A youtube game log about the game and me and my friends :).",
-        image: ['https://i.ytimg.com/vi/Qucz1EUeKwM/hqdefault.jpg'],
+        image: ["https://i.ytimg.com/vi/Qucz1EUeKwM/hqdefault.jpg"],
         tag: ["Youtube", "OBS", "VSDC", "Discord", "The Forest"],
         project_date: this.getDate(2019, 4, null),
         weeks: 1,

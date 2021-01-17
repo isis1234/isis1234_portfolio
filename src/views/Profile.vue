@@ -62,11 +62,14 @@
           </div>
           <div class="description text-center">
             <p>
-              Hi I'm Yu🤗 A Hong Konger and loving to work on one man mini
-              project. This is my porfolio for present my mini-project only, you
-              can contact me if you wanna know more in my project. I'm looking
-              for any workshop to share my skill and talk to any personal, feel 
-              free to contact me😊.
+              Hi everyone, i ma Yu🤗. A passionate developer locates in Hong
+              Kong. I would love to share some of my owned interesting
+              mini-projects😊. All of the desgin concepts are coming from my
+              daily life and the surroundings. Let me know if we can have any
+              collaborations for some workshops or sharing sessions that can let
+              me present my mini-projects to everyone interested my projects to
+              everyone interested in emerging technology and skills. You can
+              find my email/telegram from below of the website.
             </p>
           </div>
           <div class="profile-tabs">

@@ -17,7 +17,7 @@ import App from "./App.vue";
 import router from "./router";
 
 import MaterialKit from "./plugins/material-kit";
-import '../node_modules/timeline-vuejs/dist/timeline-vuejs.css'
+import "../node_modules/timeline-vuejs/dist/timeline-vuejs.css";
 
 Vue.config.productionTip = false;
 
@@ -36,6 +36,6 @@ Vue.mixin({
 });
 
 new Vue({
-  router, 
+  router,
   render: h => h(App)
 }).$mount("#app");

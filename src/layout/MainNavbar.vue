@@ -23,8 +23,7 @@
 
         <div class="md-collapse">
           <div class="md-collapse-wrapper">
-            <mobile-menu nav-mobile-section-start="false">
-            </mobile-menu>
+            <mobile-menu nav-mobile-section-start="false" />
             <md-list>
               <md-list-item
                 href="javascript:void(0)"
@@ -43,7 +42,7 @@
               <md-list-item
                 href="javascript:void(0)"
                 v-if="showDownload"
-                @click='scrollToElement("experiences")'
+                @click="scrollToElement('experiences')"
               >
                 <i class="material-icons">work</i>
                 <p>Experiences</p>
@@ -63,14 +62,11 @@
                 <p>Projects</p>
               </md-list-item>
               <hr />
-              <md-list-item 
-                href="https://github.com/isis1234"
-                target="_blank"
-              >
+              <md-list-item href="https://github.com/isis1234" target="_blank">
                 <i class="fab fa-github"></i>
                 <p class="hidden-lg">GitHub</p>
               </md-list-item>
-              <md-list-item 
+              <md-list-item
                 href="https://www.linkedin.com/in/wing-yu-tang-127226120"
                 target="_blank"
               >
