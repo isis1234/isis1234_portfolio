@@ -113,7 +113,18 @@
             class="md-layout-item md-xlarge-size-33 md-large-size-33 md-medium-size-33 md-small-size-50 ml-auto"
             :key="pj.id"
           >
-            <img :src="pj.image[0]" class="rounded" @click="pj.modal = true" />
+            <img
+              v-if="!pj.preview_image"
+              :src="pj.image[0]"
+              class="rounded"
+              @click="pj.modal = true"
+            />
+            <img
+              v-if="pj.preview_image"
+              :src="pj.preview_image"
+              class="rounded"
+              @click="pj.modal = true"
+            />
             <modal
               v-if="pj.modal"
               @close="pj.modal = false"
@@ -125,45 +136,24 @@
                 </h4>
               </template>
               <template slot="body">
-                <md-card>
-                  <carousel
-                    :per-page="1"
-                    loop
-                    :speed="700"
-                    autoplay
-                    :autoplay-timeout="5000"
-                    :mouse-drag="false"
-                    navigationEnabled
-                    navigationNextLabel="<i class='material-icons'>keyboard_arrow_right</i>"
-                    navigationPrevLabel="<i class='material-icons'>keyboard_arrow_left</i>"
+                <carousel
+                  :per-page="1"
+                  loop
+                  :speed="700"
+                  autoplay
+                  :autoplay-timeout="5000"
+                  :mouse-drag="false"
+                  navigationEnabled
+                  navigationNextLabel="<i class='material-icons'>keyboard_arrow_right</i>"
+                  navigationPrevLabel="<i class='material-icons'>keyboard_arrow_left</i>"
+                >
+                  <slide
+                    v-for="(image, index) in pj.image"
+                    :key="`${pj.id}_image_${index}`"
                   >
-                    <slide
-                      v-for="(image, index) in pj.image"
-                      :key="`${pj.id}_image_${index}`"
-                    >
-                      <img :src="image" />
-                    </slide>
-                  </carousel>
-                  <md-card-actions class="text-center">
-                    <md-button
-                      v-if="pj.github"
-                      :href="pj.guthub"
-                      target="_blank"
-                      class="md-just-icon md-simple"
-                    >
-                      <i class="fab fa-github-square" />
-                    </md-button>
-                    <md-button
-                      v-if="pj.demo"
-                      :href="pj.demo"
-                      target="_blank"
-                      class="md-just-icon md-simple"
-                    >
-                      <i class="fas fa-external-link-square-alt" />
-                    </md-button>
-                  </md-card-actions>
-                </md-card>
-                <p>{{ pj.content }}</p>
+                    <img :src="image" />
+                  </slide>
+                </carousel>
                 <div
                   v-for="(tag, index) in pj.tag"
                   :key="`${pj.id}_tag_${index}`"
@@ -171,8 +161,35 @@
                 >
                   {{ tag }}
                 </div>
+                <br />
+                <br />
+                <p>{{ pj.content }}</p>
                 <md-card-actions class="text-center">
                   {{ pj.project_date }} ({{ pj.weeks }} weeks)
+                  <md-button
+                    v-if="pj.github"
+                    :href="pj.github"
+                    target="_blank"
+                    class="md-just-icon md-simple"
+                  >
+                    <i class="fab fa-github-square" />
+                  </md-button>
+                  <md-button
+                    v-if="pj.demo"
+                    :href="pj.demo"
+                    target="_blank"
+                    class="md-just-icon md-simple"
+                  >
+                    <i class="fas fa-external-link-square-alt" />
+                  </md-button>
+                  <md-button
+                    v-if="pj.youtube"
+                    :href="pj.youtube"
+                    target="_blank"
+                    class="md-just-icon md-simple"
+                  >
+                    <i class="fab fa-youtube-square" />
+                  </md-button>
                 </md-card-actions>
               </template>
             </modal>
@@ -321,6 +338,7 @@ export default {
         modal: false,
         content:
           "A script that auto start wireless projecter when i turnon my laptop.",
+        preview_image: require("@/assets/img/project_items/MSDisplayAdapter_E6/1.gif"),
         image: [
           require("@/assets/img/project_items/MSDisplayAdapter_E6/1.gif")
         ],
@@ -342,7 +360,26 @@ export default {
       }
     ];
 
-    let hardware = [];
+    let hardware = [
+      {
+        id: "pj_racing_tab_tab_machine",
+        title: "Racing Tab Tab Machine",
+        modal: false,
+        content:
+          "Used on gaming with friends in a party. Play against with friends who is the fastest to reach the endpoint.",
+        preview_image: "https://hackster.imgix.net/uploads/attachments/779321/blob_3Cv4SWE3ln.blob?auto=compress%2Cformat&w=900&h=675&fit=min",
+        image: [
+          "https://hackster.imgix.net/uploads/attachments/779329/8903c2a5-9483-4648-b8c8-ec832f05012c_qG5GuBSF2i.jpg?auto=compress%2Cformat&w=680&h=510&fit=max",
+          "https://hackster.imgix.net/uploads/attachments/779330/1860be3a-0282-44c3-be9f-bdbefed75e2f_5XRmjyqwRO.jpg?auto=compress%2Cformat&w=680&h=510&fit=max", 
+          "https://hackster.imgix.net/uploads/attachments/779332/3af1259c-4d54-44c2-95ee-517ee734c601_5OqOXQnCbk.jpg?auto=compress%2Cformat&w=680&h=510&fit=max" 
+        ],
+        tag: ["Art", "Games", "Toys", "Kids", "Arduino"],
+        project_date: this.getDate(2019, 2, null),
+        weeks: 12,
+        demo:
+          "https://create.arduino.cc/projecthub/isis1234/racing-tab-tab-machine-214ff1"
+      }
+    ];
 
     let speaker = [];
 
