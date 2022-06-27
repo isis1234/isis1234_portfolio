@@ -3,6 +3,9 @@ node_modules/
 package-lock.json
 /dist
 /docs
+/src
+/public
+
 # local env files
 .env.local
 .env.*.local
