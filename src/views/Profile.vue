@@ -43,6 +43,13 @@
                     <i class="fab fa-telegram"></i>
                   </md-button>
                   <md-button
+                    href="https://stackoverflow.com/users/19245388/yuu"
+                    target="_blank"
+                    class="md-just-icon md-simple"
+                  >
+                    <i class="fab fa-stack-overflow"></i>
+                  </md-button>
+                  <md-button
                     @click="qr_modal = true"
                     class="md-success md-normal md-round"
                   >
@@ -156,5 +163,8 @@ export default {
 }
 .md-button i.fa-telegram {
   color: #1d98dc !important;
+}
+.md-button i.fa-stack-overflow {
+  color: #ef791b !important;
 }
 </style>

@@ -72,6 +72,26 @@ export default {
   data() {
     let major_skills = [
       {
+        id: "aws",
+        image: require("@/assets/img/skills/aws.png"),
+        name: "Amazon Web Services",
+        description: "Cloud Services",
+        tags: [
+          { id: "aws_ses", name: "SES", clicked: false },
+          { id: "aws_ec2", name: "EC2", clicked: false },
+          { id: "aws_s3", name: "S3", clicked: false },
+          { id: "aws_dynamodb", name: "DynamoDB", clicked: false },
+          { id: "aws_rds", name: "RDS", clicked: false },
+          { id: "aws_lambda", name: "Lambda", clicked: false },
+          { id: "aws_sns", name: "SNS", clicked: false },
+          { id: "aws_iot", name: "IoT Core", clicked: false },
+          { id: "aws_apigateway", name: "API Gateway", clicked: false },
+          { id: "aws_iam", name: "IAM", clicked: false },
+          { id: "aws_cloudwatch", name: "Cloud Watch", clicked: false },
+          { id: "aws_polly", name: "Polly", clicked: false }
+        ]
+      },
+      {
         id: "nodejs",
         image: require("@/assets/img/skills/nodejs.png"),
         name: "Nodejs",
@@ -93,23 +113,6 @@ export default {
         ]
       },
       {
-        id: "aws",
-        image: require("@/assets/img/skills/aws.png"),
-        name: "Amazon Web Services",
-        description: "Cloud Services",
-        tags: [
-          { id: "aws_ec2", name: "EC2", clicked: false },
-          { id: "aws_s3", name: "S3", clicked: false },
-          { id: "aws_dynamodb", name: "DynamoDB", clicked: false },
-          { id: "aws_rds", name: "RDS", clicked: false },
-          { id: "aws_lambda", name: "Lambda", clicked: false },
-          { id: "aws_sns", name: "SNS", clicked: false },
-          { id: "aws_iot", name: "IoT Core", clicked: false },
-          { id: "aws_apigateway", name: "API Gateway", clicked: false },
-          { id: "aws_iam", name: "IAM", clicked: false }
-        ]
-      },
-      {
         id: "arduino",
         image: require("@/assets/img/skills/arduino.png"),
         name: "Arduino",
@@ -121,60 +124,60 @@ export default {
           { id: "arduino_home", name: "Home security", clicked: false },
           { id: "arduino_music", name: "Music Box", clicked: false }
         ]
+      }
+    ];
+    let minor_skills = [
+       {
+        id: "vue",
+        image: require("@/assets/img/skills/vue.png"),
+        name: "Vue",
+        description: "Frontend",
+        // tags: [
+        //   { id: "vue_admin", name: "Admin Panel", clicked: false },
+        //   { id: "vue_portfolio", name: "Portfolio", clicked: false },
+        //   { id: "vue_cli_service", name: "vue-cli-service", clicked: false },
+        //   { id: "vue_material", name: "Material", clicked: false },
+        //   { id: "vue_i18n", name: "i18n", clicked: false }
+        // ]
+      },
+      {
+        id: "expo",
+        image: require("@/assets/img/skills/expo.png"),
+        name: "Expo",
+        clicked: false
       },
       {
         id: "python",
         image: require("@/assets/img/skills/python.png"),
         name: "Python",
         description: "Backend",
-        tags: [
-          { id: "py_system", name: "System Control", clicked: false },
-          { id: "py_curl", name: "curl", clicked: false },
-          { id: "py_face", name: "Face Recognition", clicked: false },
-          { id: "py_bigdata", name: "Big Data", clicked: false }
-        ]
-      },
-      {
-        id: "vue",
-        image: require("@/assets/img/skills/vue.png"),
-        name: "Vue",
-        description: "Frontend",
-        tags: [
-          { id: "vue_admin", name: "Admin Panel", clicked: false },
-          { id: "vue_portfolio", name: "Portfolio", clicked: false },
-          { id: "vue_cli_service", name: "vue-cli-service", clicked: false },
-          { id: "vue_material", name: "Material", clicked: false },
-          { id: "vue_i18n", name: "i18n", clicked: false }
-        ]
+        // tags: [
+        //   { id: "py_system", name: "System Control", clicked: false },
+        //   { id: "py_curl", name: "curl", clicked: false },
+        //   { id: "py_face", name: "Face Recognition", clicked: false },
+        //   { id: "py_bigdata", name: "Big Data", clicked: false }
+        // ]
       },
       {
         id: "dotnet",
         image: require("@/assets/img/skills/dotnet.png"),
         name: ".Net",
         description: "Agile Development",
-        tags: [
-          { id: "dotnet_i18n", name: "i18n", clicked: false },
-          { id: "dotnet_iis", name: "IIS", clicked: false },
-          { id: "dotnet_mssql", name: "MSSQL", clicked: false },
-          { id: "dotnet_vb", name: "VB", clicked: false },
-          { id: "dotnet_c", name: "C", clicked: false },
-          { id: "dotnet_cshap", name: "C#", clicked: false },
-          { id: "dotnet_erp", name: "ERP", clicked: false },
-          { id: "dotnet_crm", name: "CRM", clicked: false }
-        ]
-      }
-    ];
-    let minor_skills = [
+        // tags: [
+        //   { id: "dotnet_i18n", name: "i18n", clicked: false },
+        //   { id: "dotnet_iis", name: "IIS", clicked: false },
+        //   { id: "dotnet_mssql", name: "MSSQL", clicked: false },
+        //   { id: "dotnet_vb", name: "VB", clicked: false },
+        //   { id: "dotnet_c", name: "C", clicked: false },
+        //   { id: "dotnet_cshap", name: "C#", clicked: false },
+        //   { id: "dotnet_erp", name: "ERP", clicked: false },
+        //   { id: "dotnet_crm", name: "CRM", clicked: false }
+        // ]
+      },
       {
         id: "go",
         image: require("@/assets/img/skills/go.png"),
         name: "Go",
-        clicked: false
-      },
-      {
-        id: "expo",
-        image: require("@/assets/img/skills/expo.png"),
-        name: "Expo",
         clicked: false
       },
       {

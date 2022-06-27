@@ -77,6 +77,10 @@
                 <i class="fab fa-telegram"></i>
                 <p class="hidden-lg">Telegram</p>
               </md-list-item>
+              <md-list-item href="https://stackoverflow.com/users/19245388/yuu" target="_blank">
+                <i class="fab fa-stack-overflow"></i>
+                <p class="hidden-lg">Stack Overflow</p>
+              </md-list-item>
             </md-list>
           </div>
         </div>
