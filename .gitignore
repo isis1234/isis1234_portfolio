@@ -5,6 +5,14 @@ package-lock.json
 /docs
 /src
 /public
+.browserslistrc
+.eslintrc.js
+.postcssrc.js
+CHANGELOG.md
+ISSUE_TEMPLATE.md
+babel.config.js
+package.json
+vue.config.js
 
 # local env files
 .env.local
